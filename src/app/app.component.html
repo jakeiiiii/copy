@@ -1,0 +1,10 @@
+<app-top-navigation></app-top-navigation>
+<div class="container">
+  <div class="left-navigation">
+    <app-left-navigation></app-left-navigation>
+  </div>
+  <div class="content" [@routeAnimations]="prepareRouteTransition(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
+</div>
+<app-footer></app-footer>

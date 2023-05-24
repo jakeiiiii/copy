@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+  }
+  
+  .left-navigation {
+    width: 200px;
+  }
+  
+  .content {
+    flex-grow: 1;
+  }
+  
+  /* Define animation styles */
+  :host {
+    display: block;
+  }
+  
+  .router-outlet {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+  
+  /* Add any additional styles you need */
+  
+
+  .route-transition {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slide-out {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
